@@ -69,13 +69,12 @@
     const userData = JSON.parse(getUser);
     const mapData = JSON.parse(getMap);
 
-    console.log(userData);
 
     let zoomStart = 2;
     let latStart = 0.0000;
     let lngStart = 0.0000;
 
-    if (pinsData) {
+    if (pinsData.length) {
       zoomStart = 12;
       latStart = Number(pinsData[0].latitude);
       lngStart = Number(pinsData[0].longitude);
@@ -104,7 +103,6 @@
           '<form action="/pins/add" method="POST" class="newPin">' +
           '<input class="form-control hiddenForm" type="text" name="newLng" value="'+ longitude + '">' +
           '<input class="form-control hiddenForm" type="text" name="newLat" value="'+ latitude + '">' +
-          '<input class="form-control hiddenForm" type="text" name="userID" value="'+ userData.id + '">' +
           '<input class="form-control hiddenForm" type="text" name="mapId" value="'+ mapData.id + '">' +
           '<div class="form-group">' +
           '<label for="newTitle">Title:</label>' +

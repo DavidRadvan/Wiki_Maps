@@ -7,8 +7,7 @@ const createFakeMap = () => ({
   contributor_id: randomNum(numOfUsers),
   title: faker.lorem.words(),
   description: faker.lorem.sentence(),
-  thumbnail_img: faker.image.city(),
-  city: faker.address.city()
+  thumbnail_img: faker.image.city()
 });
 
 exports.seed = async (knex) => {

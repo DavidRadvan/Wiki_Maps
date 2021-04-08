@@ -91,11 +91,11 @@
             </a>
             <% if (mapIdsFavorites.includes(contributions[i].id)) { %>
               <button class="favoriteIcon favorited" type="button" name="button">
-                <i class="fas fa-star"></i>
+                <i class="fas fa-star" name="<%= contributions[i].id %>"></i>
               </button>
               <% } else { %>
                 <button class="favoriteIcon" type="button" name="button">
-                  <i class="far fa-star"></i>
+                  <i class="far fa-star" name="<%= contributions[i].id %>"></i>
                 </button>
               <% } %>
             <p class="mapDescription"><%= contributions[i].description %></p>

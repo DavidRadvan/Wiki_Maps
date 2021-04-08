@@ -17,6 +17,7 @@ The following are the goals that was set to be achieved by this project.
 
 ![home-page.png](https://github.com/DavidRadvan/Wiki_Maps/blob/routes/public/images/home-page.png?raw=true)
 ![home-page-dark-mode.png](https://github.com/DavidRadvan/Wiki_Maps/blob/routes/public/images/home-page-dark-mode.png?raw=true)
+![map-page.png](https://github.com/DavidRadvan/Wiki_Maps/blob/master/public/images/map-page.png?raw=true)
 ![profile-page.png](https://github.com/DavidRadvan/Wiki_Maps/blob/routes/public/images/profile-page.png?raw=true)
 
 ## Getting Started

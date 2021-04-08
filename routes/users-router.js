@@ -7,7 +7,7 @@ const { getFavoritesByUserId } = require('../lib/queriesFavorites')
 // /GET/users/logout/:id   =>  deletes cookie session
 router.get('/logout/:id', (req, res) => {
   req.session.user_id = null;
-  res.redirect('/');
+  res.redirect('back');
 });
 
 //  /GET/users/:id
@@ -46,7 +46,7 @@ router.get('/login/:id', (req, res) => {
   req.session.user_id = req.params.id;
   getUserById(req.params.id)
     .then((user) => {
-      return res.redirect('/');
+      return res.redirect('back');
     }).catch(err => {
       console.log('Error occured');
       console.log(err);

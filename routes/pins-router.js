@@ -4,16 +4,20 @@ const { addPin, deletePin, editPin } = require('../lib/queriesPins');
 
 // /POST/pins/add
 router.post('/add', (req, res) => {
+
   const pinObj = {
     longitude: req.body.newLng,
     latitude: req.body.newLat,
     title: req.body.newTitle,
     description: req.body.newDescription,
     pin_img: req.body.newPinImg,
+    user_id: req.body.userID,
+    map_id: req.body.mapId
   };
+
   addPin(pinObj)
     .then((result) => {
-      res.redirect(`/users/${req.session.user_id}`);
+      res.redirect(`/maps/${req.body.mapId}`);
     }).catch(err => {
       console.log('Error occured');
       console.log(err);

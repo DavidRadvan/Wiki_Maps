@@ -7,6 +7,5 @@ CREATE TABLE maps (
   contributor_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   title VARCHAR(255) NOT NULL,
   description TEXT,
-  thumbnail_img VARCHAR(255) NOT NULL,
-  city VARCHAR(255) NOT NULL
+  thumbnail_img VARCHAR(255) NOT NULL
 );
