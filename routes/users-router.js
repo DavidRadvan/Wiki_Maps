@@ -2,7 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const { getUserById, getUserFavorite, addUserFavorite } = require('../lib/queriesUsers');
 const { getContributedByUser } = require('../lib/queriesMaps');
-const {getFavoritesByUserId} = require('../lib/queriesFavorites')
+const { getFavoritesByUserId } = require('../lib/queriesFavorites')
 
 // /GET/users/logout/:id   =>  deletes cookie session
 router.get('/logout/:id', (req, res) => {
