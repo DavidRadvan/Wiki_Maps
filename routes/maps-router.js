@@ -15,9 +15,10 @@ router.get('/new', (req, res) => {
         user: user,
         light: req.session.light
       };
-      console.log('templateVars /maps/new/: ', templateVars);
+
       return res.render('maps_new', templateVars);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -51,9 +52,9 @@ router.get('/:id', (req, res) => {
     .then((mapIdsFavorites) => {
       templateVars.mapIdsFavorites = mapIdsFavorites;
 
-      console.log('templateVars maps/:id/: ', templateVars);
       return res.render('maps_show', templateVars);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -73,9 +74,9 @@ router.get('/:id/edit', (req, res) => {
     .then((user) => {
       templateVars.user = user;
 
-      console.log('templateVars maps/:id/edit/: ', templateVars);
       return res.render('maps_edit', templateVars);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -93,7 +94,8 @@ router.post('/:id/edit', (req, res) => {
   editMapById(mapObj)
     .then((result) => {
       res.redirect(`/maps/${req.params.id}`);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -113,7 +115,8 @@ router.post('/new', (req, res) => {
   addMap(mapObj)
     .then((result) => {
       res.redirect(`/maps/${result.id}`);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -124,7 +127,8 @@ router.post('/:id/delete', (req, res) => {
   deleteMap(req.params.id)
     .then((result) => {
       res.redirect(`/users/${req.session.user_id}`);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
