@@ -18,7 +18,8 @@ router.post('/add', (req, res) => {
   addPin(pinObj)
     .then((result) => {
       res.redirect(`/maps/${req.body.mapId}`);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -36,7 +37,8 @@ router.post('/:id/edit', (req, res) => {
   editPin(pinObj)
     .then((result) => {
       res.redirect('back');
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -50,7 +52,8 @@ router.post('/:id/delete', (req, res) => {
   deletePin(pinObj)
     .then((result) => {
       res.redirect('back');
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });

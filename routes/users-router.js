@@ -28,13 +28,13 @@ router.get('/:id', (req, res) => {
       templateVars.contributions = contributions;
 
     return getFavoritesByUserId(req.session.user_id);
-  })
-  .then((mapIdsFavorites) => {
-    templateVars.mapIdsFavorites = mapIdsFavorites;
+    })
+    .then((mapIdsFavorites) => {
+      templateVars.mapIdsFavorites = mapIdsFavorites;
 
-      console.log('templateVars users/:id/: ', templateVars);
       return res.render('profile_show', templateVars);
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
@@ -47,7 +47,8 @@ router.get('/login/:id', (req, res) => {
   getUserById(req.params.id)
     .then((user) => {
       return res.redirect('back');
-    }).catch(err => {
+    })
+    .catch(err => {
       console.log('Error occured');
       console.log(err);
     });
