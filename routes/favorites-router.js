@@ -13,11 +13,9 @@ router.post('/add', (req, res) => {
 
   addFavorite(favoriteObj)
     .then(result => {
-      console.log('successfully added to favorites:', result);
       res.send();
     })
     .catch(err => {
-      console.log(err);
       res.statusCode(400).end('Error, unable to add to favorites');
     });
 
@@ -33,7 +31,6 @@ router.post('/delete', (req, res) => {
 
   deleteFavorite(favoriteObj)
     .then(result => {
-      console.log('successfully deleted to favorites:', result);
       res.send();
     })
     .catch(err => {
@@ -42,8 +39,6 @@ router.post('/delete', (req, res) => {
     });
 
 });
-
-
 
 module.exports = router;
 

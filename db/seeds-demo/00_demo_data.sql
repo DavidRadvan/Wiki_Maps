@@ -1,4 +1,4 @@
--- HERE I ADD 'real' data that we can use for demo. Run this prior to seeding with fake data.
+-- Some created fake data for our demo day presentation
 
 INSERT INTO users(name, email, city, profile_pic) VALUES
 ('Ryan Reynolds', 'ryan@reynolds.com', 'Vancouver', 'https://github.com/DavidRadvan/Wiki_Maps/blob/master/public/images/ryan-rey.png?raw=true'),
@@ -8,7 +8,7 @@ INSERT INTO users(name, email, city, profile_pic) VALUES
 
 INSERT INTO maps (contributor_id, title, description, thumbnail_img) VALUES
 (1, 'Places to see rain in Vancouver', 'Here is a map to show my true passion in life, rain watching.', 'https://bit.ly/3d1k95D' ),
-(1, 'Places to kill Deadpool', 'Places where people have seen Deadpool so I can kill him', 'https://bit.ly/3urKVtM'),
+(1, 'Places to love Deadpool', 'Places where people have seen Deadpool so I can love him', 'https://bit.ly/3urKVtM'),
 (1, 'Places to eat Chicken', 'fun fun chicken dinner', 'https://bit.ly/3d2CAH3'),
 (1, 'Top places to have Sushi', 'I love sushi', 'https://bit.ly/3dOjbZw'),
 (2, 'Chicken Coop ', 'Tasty', 'https://bit.ly/3uMBNAf'),
