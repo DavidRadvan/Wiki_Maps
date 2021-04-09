@@ -10,7 +10,6 @@ router.post('/add', (req, res) => {
   const favoriteObj = req.body;
 
   favoriteObj.user_id = user_id;
-  console.log('favoriteObj:', favoriteObj);
 
   addFavorite(favoriteObj)
     .then(result => {
@@ -31,7 +30,6 @@ router.post('/delete', (req, res) => {
   const favoriteObj = req.body;
 
   favoriteObj.user_id = user_id;
-  console.log('favoriteObj:', favoriteObj);
 
   deleteFavorite(favoriteObj)
     .then(result => {

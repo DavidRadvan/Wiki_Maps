@@ -211,10 +211,10 @@
     let latStart = 0.0000;
     let lngStart = 0.0000;
 
-    if (pinsData) {
+    if (pinsData.length) {
       zoomStart = 12;
-      latStart = Number(pinsData[0].latitude);
-      lngStart = Number(pinsData[0].longitude);
+      latStart = Number(pinsData[pinsData.length - 1].latitude);
+      lngStart = Number(pinsData[pinsData.length - 1].longitude);
     }
 
     function initMap() {
